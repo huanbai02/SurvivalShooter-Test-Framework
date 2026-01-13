@@ -1,0 +1,4 @@
+airtest
+pocoui
+pydirectinput
+pyautogui
