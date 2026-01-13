@@ -3,10 +3,10 @@
 > 基于 **Airtest + Poco + Python** 的 Unity 游戏全流程自动化测试框架。
 > 实现了 **POM** 设计模式，解决了 Windows 平台下的 DirectInput 输入兼容性问题。
 
-## 📸 运行效果
+## 运行效果
 ![alt text](image.png)
 
-## 🏗️ 项目架构
+## 项目架构
 
 | 模块 | 说明 |
 | :--- | :--- |
@@ -14,7 +14,7 @@
 | **GamePages.py** | **业务逻辑层 (POM)**。封装 `MainPage` 和 `BattlePage`，实现业务与代码分离，包含状态机逻辑。 |
 | **test_complex.air** | **测试用例层**。包含状态机测试，验证 "战斗 -> 死亡 -> 自动重置 -> 状态归零" 的完整闭环。 |
 
-## 🚀 核心难点与解决方案
+## 核心难点与解决方案
 
 ### 1. 底层输入兼容性 (Input System Conflict)
 * **问题**：Unity 引擎在 Windows 窗口模式下，会屏蔽常规自动化工具（如 `pyautogui`）的虚拟按键信号。
