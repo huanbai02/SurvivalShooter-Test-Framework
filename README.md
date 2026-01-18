@@ -16,10 +16,10 @@
 
 ## 核心难点与解决方案
 
-### 1. 底层输入兼容性 (Input System Conflict)
+### 1. 底层输入兼容性
 * **问题**：Unity 引擎在 Windows 窗口模式下，会屏蔽常规自动化工具（如 `pyautogui`）的虚拟按键信号。
 * **解决**：引入 `pydirectinput` 库，通过 **DirectX Scan Codes** 发送硬件级输入信号，成功接管角色移动与射击控制。
 
-### 2. 游戏状态闭环 (State Machine Testing)
+### 2. 游戏状态闭环
 * **问题**：游戏死亡后会自动重载场景，导致传统的“点击重开”逻辑失效。
-* **解决**：设计了智能监听算法 `wait_for_auto_restart`，通过轮询 **分数(Score)** 与 **UI状态(GameOverText)** 的组合条件，精准判断游戏是否完成重置。
+* **解决**：设计了智能监听算法 `wait_for_auto_restart`，通过轮询 **分数** 与 **UI状态** 的组合条件，精准判断游戏是否完成重置。
